@@ -1,0 +1,116 @@
+/* General container for the component */
+.note-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+/* Styles for the button to show all notes */
+.show-notes-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-image: linear-gradient(135deg, #1f4068, #6a0572); /* A nice gradient */
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.show-notes-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.show-notes-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the main notes list container */
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between grid items */
+  margin-top: 2rem;
+}
+
+/* Styles for each individual note item */
+.note-item {
+  background-color: #2c3e50; /* Dark blue background */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid #9c27b0; /* A colored accent bar */
+}
+
+.note-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Typography for the note content */
+.note-item h4 {
+  color: #e0e0e0;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.note-item p {
+  color: #c0c0c0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Style for the "No notes present" message */
+.no-notes-message {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+/* Add to your existing styles */
+
+/* Styles for the note item's header to position title and button */
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.note-header h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  flex-grow: 1; /* Allows it to take up available space */
+}
+
+/* New CSS for the stylish delete button */
+.note-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.2rem;
+  color: #ff6347; /* A red color for danger */
+  transition: transform 0.2s ease;
+}
+
+.note-delete-btn:hover {
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.note-delete-btn:active {
+  transform: scale(0.95); /* A click effect */
+}
+
+/* Optional: If you want to use text instead of an emoji */
+.note-delete-btn span {
+  font-weight: bold;
+}
